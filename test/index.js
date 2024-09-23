@@ -1,16 +1,16 @@
-const extract = require('../')
-const fs = require('fs-extra')
-const os = require('os')
-const path = require('path')
-const test = require('ava')
+import extract from '../index.js'
+import fs from 'fs-extra'
+import os from 'os'
+import path from 'path'
+import test from 'ava'
 
-const catsZip = path.join(__dirname, 'cats.zip')
-const githubZip = path.join(__dirname, 'github.zip')
-const noPermissionsZip = path.join(__dirname, 'no-permissions.zip')
-const subdirZip = path.join(__dirname, 'file-in-subdir-without-subdir-entry.zip')
-const symlinkDestZip = path.join(__dirname, 'symlink-dest.zip')
-const symlinkZip = path.join(__dirname, 'symlink.zip')
-const brokenZip = path.join(__dirname, 'broken.zip')
+const catsZip = path.join(import.meta.url, 'cats.zip')
+const githubZip = path.join(import.meta.url, 'github.zip')
+const noPermissionsZip = path.join(import.meta.url, 'no-permissions.zip')
+const subdirZip = path.join(import.meta.url, 'file-in-subdir-without-subdir-entry.zip')
+const symlinkDestZip = path.join(import.meta.url, 'symlink-dest.zip')
+const symlinkZip = path.join(import.meta.url, 'symlink.zip')
+const brokenZip = path.join(import.meta.url, 'broken.zip')
 
 const relativeTarget = './cats'
 
@@ -36,7 +36,7 @@ async function pathDoesntExist (t, pathToCheck, message) {
 
 async function assertPermissions (t, pathToCheck, expectedMode) {
   const stats = await fs.stat(pathToCheck)
-  const actualMode = (stats.mode & 0o777)
+  const actualMode = stats.mode & 0o777
   t.is(actualMode, expectedMode)
 }
 
@@ -85,11 +85,7 @@ test('verify github zip extraction worked', async t => {
 test('opts.onEntry', async t => {
   const dirPath = await mkdtemp(t, 'onEntry')
   const actualEntries = []
-  const expectedEntries = [
-    'symlink/',
-    'symlink/foo.txt',
-    'symlink/foo_symlink.txt'
-  ]
+  const expectedEntries = ['symlink/', 'symlink/foo.txt', 'symlink/foo_symlink.txt']
   const onEntry = function (entry) {
     actualEntries.push(entry.fileName)
   }
@@ -102,7 +98,7 @@ test('relative target directory', async t => {
   await t.throwsAsync(extract(catsZip, { dir: relativeTarget }), {
     message: 'Target directory is expected to be absolute'
   })
-  await pathDoesntExist(t, path.join(__dirname, relativeTarget), 'folder not created')
+  await pathDoesntExist(t, path.join(import.meta.url, relativeTarget), 'folder not created')
   await fs.remove(relativeTarget)
 })
 
